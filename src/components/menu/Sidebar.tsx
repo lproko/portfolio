@@ -26,7 +26,8 @@ function Sidebar() {
       clipPath: `circle(3000px at ${isMobile ? "320px" : "1880px"} 50px)`,
       transition: {
         type: "spring",
-        stiffness: 20,
+        damping: 40,
+        stiffness: 100,
       },
     },
     closed: {

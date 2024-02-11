@@ -34,7 +34,7 @@ function Menus() {
   const items = ["Homepage", "Portfolio", "Works", "About", "Contact"];
 
   return (
-    <motion.div className="list">
+    <motion.div className="list" variants={variants}>
       {items.map((item: any) => {
         return (
           <Box
