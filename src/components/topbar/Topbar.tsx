@@ -21,8 +21,8 @@ function Topbar() {
             <a href="#Homepage" className="logo">
               <img
                 src="../../src/assets/banner.png"
-                width="auto"
-                height="80px"
+                // width="auto"
+                // height="80px"
                 alt="logo"
               />
             </a>

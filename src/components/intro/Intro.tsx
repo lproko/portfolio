@@ -1,8 +1,9 @@
 import "./Intro.scss";
 import { Grid, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import Myphoto from "../../assets/photo-of-me.png";
+import Myphoto from "../../assets/mainIconsdark.svg";
 import Scroll from "../../assets/scroll.png";
+import BlackHole from "../../assets/blackhole.webm";
 
 const textVariants = {
   initial: {
@@ -40,20 +41,44 @@ const sliderVariants = {
     },
   },
 };
+const slideInFromRight = {
+  initial: { x: -100, opacity: 0 },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      duration: 0.5,
+    },
+  },
+};
 
 function Intro() {
   return (
     <Grid className="intro" id="Homepage">
-      <div className="wrapper">
+      <video
+        autoPlay
+        muted
+        loop
+        className="videoAnimation rotate-180 absolute top-[-340px]  h-full w-full left-0 z-[1] object-cover "
+      >
+        <source src={BlackHole} type="video/webm" />
+      </video>
+      <Grid className="wrapper">
         <motion.div
           className="textContainer"
           variants={textVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>LAUREN PROKO</motion.h2>
+          <motion.h2
+            className="Welcome-text Welcome-box"
+            variants={textVariants}
+          >
+            LAUREN PROKO
+          </motion.h2>
           <motion.h1 variants={textVariants}>
-            Software Engineer and Web developer
+            Software Engineer & Web developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -68,7 +93,21 @@ function Intro() {
             alt=""
           />
         </motion.div>
-      </div>
+      </Grid>
+      <Grid className="rightWrapper">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={slideInFromRight}
+        >
+          <Box
+            component="img"
+            src={Myphoto}
+            alt=""
+            // className="imageContainer"
+          ></Box>
+        </motion.div>
+      </Grid>
       <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
@@ -77,13 +116,6 @@ function Intro() {
       >
         Elevate Your Web Presence!
       </motion.div>
-
-      <Box
-        component="img"
-        src={Myphoto}
-        alt=""
-        className="imageContainer"
-      ></Box>
     </Grid>
   );
 }

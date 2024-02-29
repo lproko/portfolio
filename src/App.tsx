@@ -14,6 +14,7 @@ function App() {
       <Topbar />
       <Grid className="section">
         <Intro />
+
         <Box id="Portfolio">
           <Parallax type="portfolio" />
         </Box>

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Planet from "../../assets/planets.png";
@@ -21,7 +21,7 @@ const Parallax = (props: Properties) => {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <Box
+    <motion.div
       className="parallax"
       ref={ref}
       style={{
@@ -43,7 +43,7 @@ const Parallax = (props: Properties) => {
         }}
       ></motion.div>
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
-    </Box>
+    </motion.div>
   );
 };
 

@@ -1,7 +1,7 @@
 @import "../../app.scss";
 .works {
   background: linear-gradient(180deg, #0c0c1d, #111132);
-  height: 100%;
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
