@@ -78,8 +78,14 @@ function Intro() {
             LAUREN PROKO
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            Software Engineer & Web developer
+            <p>Elevating online presence</p> through expertly crafted web
+            solutions
           </motion.h1>
+          <motion.h3 variants={textVariants}>
+            Create exciting online experiences with full-stack mastery and years
+            of experience
+          </motion.h3>
+
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the Latest Works

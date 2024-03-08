@@ -13,18 +13,31 @@ function App() {
     <Grid className="app">
       <Topbar />
       <Grid className="section">
-        <Intro />
-
-        <Box id="Portfolio">
-          <Parallax type="portfolio" />
-        </Box>
-        <Portfolio />
-        <Box id="Works">
-          <Parallax type="services" />
-        </Box>
-        <Works />
-        <Testimonials />
-        <Contact />
+        <section>
+          <Intro />
+        </section>
+        <section>
+          <Box id="Portfolio">
+            <Parallax type="portfolio" />
+          </Box>
+        </section>
+        <section>
+          <Portfolio />
+        </section>
+        <section>
+          <Box id="Works">
+            <Parallax type="services" />
+          </Box>
+        </section>
+        <section>
+          <Works />
+        </section>
+        <section>
+          <Testimonials />
+        </section>
+        <section>
+          <Contact />
+        </section>
       </Grid>
     </Grid>
   );
