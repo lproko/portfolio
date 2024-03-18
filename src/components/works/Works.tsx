@@ -1,349 +1,129 @@
 import "./Works.scss";
-import {
-  Grid,
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  CardActionArea,
-} from "@mui/material";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import People from "../../assets/people.webp";
-import Web from "../../assets/cards/web_icon.svg";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import projImg1 from "../../assets/project-img1.png";
+import projImg2 from "../../assets/project-img2.png";
+import projImg3 from "../../assets/project-img3.png";
+import colorSharp2 from "../../assets/color-sharp2.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
-const variants = {
-  initial: {
-    x: -500,
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
 function Works() {
-  const ref = useRef(null);
-
-  const isInView = useInView(ref, { margin: "-100px" });
+  const projects = [
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg3,
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Business Startup",
+      description: "Design & Development",
+      imgUrl: projImg3,
+    },
+  ];
 
   return (
-    <motion.div
-      className="works"
-      variants={variants}
-      initial="initial"
-      //animate="animate"
-      //whileInView="animate"
-      ref={ref}
-      animate={isInView && "animate"}
-    >
-      <motion.div className="textContainer" variants={variants}>
-        <p>
-          I focus on helping your brand grow
-          <br /> and move forward
-        </p>
-        <hr />
-      </motion.div>
-      <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src={People} alt="" />
-          <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
-            Business.
-          </h1>
-          <button>WHAT WE DO?</button>
-        </div>
-      </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        {/* <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div> */}
-        <Card
-          sx={{
-            maxWidth: 240,
-            height: "230px",
-            background: "transparent",
-            color: "white",
-          }}
-        >
-          <CardActionArea>
-            <Box
-              width="100%"
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <Box
-                height="48px"
-                width="48px"
-                sx={{
-                  borderRadius: "50%",
-                  border: "solid 2px #8b5cf6",
-                }}
-              >
-                <img
-                  style={{ paddingTop: "5px", paddingLeft: "6px" }}
-                  src={Web}
-                  alt="web"
-                />
-              </Box>
-            </Box>
-
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 240, height: "230px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="50"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 240, height: "230px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="50"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </motion.div>
-      <motion.div className="listContainer" variants={variants}>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345, height: "280px" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="../../src/assets/web-development.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Web Development
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - Tailored solutions designed to meet your unique business
-                needs.
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                - From concept to deployment, we create websites from scratch.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </motion.div>
-    </motion.div>
+    <section className="project" id="projects">
+      <Container>
+        <Row>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) => {
+                return (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__fadeIn" : ""
+                    }
+                  >
+                    {/* {console.log(isVisible)} */}
+                    <h2>Projects</h2>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book.
+                    </p>
+                    <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                      <Nav
+                        variant="pills"
+                        className="nav-pills mb-5 justify-content-center align-items-center"
+                        id="pills-tab"
+                      >
+                        <Nav.Item>
+                          <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                          <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                          <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        </Nav.Item>
+                      </Nav>
+                      <Tab.Content
+                        id="slideInUp"
+                        className={
+                          isVisible
+                            ? "animate__animated animate__slideInUp"
+                            : ""
+                        }
+                      >
+                        <Tab.Pane eventKey="first">
+                          <Row>
+                            {projects.map((project, index) => {
+                              return <ProjectCard key={index} {...project} />;
+                            })}
+                          </Row>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="second">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque quam, quod neque provident velit, rem
+                            explicabo excepturi id illo molestiae blanditiis,
+                            eligendi dicta officiis asperiores delectus quasi
+                            inventore debitis quo.
+                          </p>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="third">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Cumque quam, quod neque provident velit, rem
+                            explicabo excepturi id illo molestiae blanditiis,
+                            eligendi dicta officiis asperiores delectus quasi
+                            inventore debitis quo.
+                          </p>
+                        </Tab.Pane>
+                      </Tab.Content>
+                    </Tab.Container>
+                  </div>
+                );
+              }}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+      <img className="background-image-right" src={colorSharp2}></img>
+    </section>
   );
 }
 

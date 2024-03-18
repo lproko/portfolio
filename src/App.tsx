@@ -7,6 +7,7 @@ import Works from "./components/works/Works";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Parallax from "./components/parallax/Paralax";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
             <Parallax type="services" />
           </Box>
         </section>
-        <section>
-          <Works />
-        </section>
+
+        <Works />
+
         <section>
           <Testimonials />
         </section>

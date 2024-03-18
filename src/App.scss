@@ -1,56 +1,19 @@
-// html {
-//   scroll-behavior: smooth;
-//   scroll-snap-type: y mandatory;
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
-// }
+@font-face {
+  font-family: Centra;
+  src: url("./assets/font/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url("./assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url("./assets/font/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
 
-// * {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
-
-// .app {
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
-//   scroll-snap-align: end;
-
-//   .section {
-//     width: 100%;
-//     //height: calc(100vh - 100px);
-//     background-color: aqua;
-//     position: relative;
-//     top: 100px;
-
-//     scrollbar-width: none; //firfox
-//     &::-webkit-scrollbar {
-//       display: none;
-//     }
-
-//     > * {
-//       width: 100vw;
-//     }
-//   }
-// }
-
-// @mixin mobile {
-//   @media (max-width: 738px) {
-//     @content;
-//   }
-// }
-// @mixin tablet {
-//   @media (max-width: 1024px) {
-//     @content;
-//   }
-// }
-// @mixin desktop {
-//   @media (max-width: 1366px) {
-//     @content;
-//   }
-// }
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -63,7 +26,8 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // font-family: "DM Sans", sans-serif;
+  // font-family: "Cedarville Cursive", cursive;
+  // font-family: "Arial", sans-serif;
 }
 
 body {
@@ -76,12 +40,12 @@ a {
   color: inherit;
 }
 
-section {
-  height: 100vh;
-  width: 100vw;
-  scroll-snap-align: center;
-  overflow: hidden;
-}
+// section {
+//   height: 100vh;
+//   width: 100vw;
+//   scroll-snap-align: center;
+//   overflow: hidden;
+// }
 
 @mixin mobile {
   @media (max-width: 738px) {

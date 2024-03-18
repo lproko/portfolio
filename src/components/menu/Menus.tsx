@@ -41,7 +41,7 @@ function Menus() {
             sx={{
               display: "flex",
               width: "100%",
-              height: { xs: "30px", md: "55px" },
+              height: { xs: "25px", md: "60px" },
               justifyContent: "center",
               alignItem: "center",
             }}
