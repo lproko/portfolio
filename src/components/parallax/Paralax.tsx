@@ -25,10 +25,7 @@ const Parallax = (props: Properties) => {
       className="parallax"
       ref={ref}
       style={{
-        background:
-          props.type === "porfolio"
-            ? "linear-gradient(180deg, #111132, #0c0c1d)"
-            : "linear-gradient(180deg, #111132, #505064)",
+        background: "linear-gradient(180deg, #030014, #030014)",
       }}
     >
       <motion.h1 style={{ y: yText }}>

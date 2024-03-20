@@ -6,14 +6,12 @@ const variants = {
   open: {
     transition: {
       staggerChildren: 0.1,
-      overflow: "hiden",
     },
   },
   closed: {
     transition: {
       staggerChildren: 0.05,
       staggerDirection: -1,
-      overflow: "hiden",
     },
   },
 };
@@ -21,12 +19,12 @@ const itemVariants = {
   open: {
     opacity: 1,
     textDecoration: "none",
-    overflow: "hiden",
+    // overflow: "hiden",
   },
   closed: {
     opacity: 0,
     textDecoration: "none",
-    overflow: "hiden",
+    // overflow: "hiden",
   },
 };
 
@@ -52,7 +50,7 @@ function Menus() {
               href={`#${item}`}
               key={item}
               variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ fontSize: "40px" }}
               whileTap={{ scale: 0.95 }}
             >
               {item}
