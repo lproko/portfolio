@@ -58,11 +58,12 @@ function Works() {
                     {/* {console.log(isVisible)} */}
                     <h2>Projects</h2>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      Discover a showcase of our latest projects where
+                      creativity meets functionality. From stunning website
+                      designs to innovative web applications, each project
+                      exemplifies our commitment to excellence and client
+                      satisfaction. Dive in to see how we can bring your vision
+                      to life.
                     </p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       <Nav
@@ -70,15 +71,15 @@ function Works() {
                         className="nav-pills mb-5 justify-content-center align-items-center"
                         id="pills-tab"
                       >
-                        <Nav.Item>
+                        {/* <Nav.Item>
                           <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
+                        </Nav.Item> */}
+                        {/* <Nav.Item>
                           <Nav.Link eventKey="second">Tab 2</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                           <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item> */}
                       </Nav>
                       <Tab.Content
                         id="slideInUp"
@@ -95,7 +96,7 @@ function Works() {
                             })}
                           </Row>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="second">
+                        {/* <Tab.Pane eventKey="second">
                           <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Cumque quam, quod neque provident velit, rem
@@ -112,7 +113,7 @@ function Works() {
                             eligendi dicta officiis asperiores delectus quasi
                             inventore debitis quo.
                           </p>
-                        </Tab.Pane>
+                        </Tab.Pane> */}
                       </Tab.Content>
                     </Tab.Container>
                   </div>
