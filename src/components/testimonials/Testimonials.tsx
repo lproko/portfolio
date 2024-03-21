@@ -1,5 +1,5 @@
 import "./Testimonials.scss";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 
 function Testimonials() {
   return (

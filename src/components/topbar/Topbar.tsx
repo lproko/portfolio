@@ -2,15 +2,14 @@ import "./Topbar.scss";
 import { Grid, Box } from "@mui/material";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "../menu/Sidebar";
 
 function Topbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <Grid className={`topbar ${menuOpen ? "active" : ""}`}>
+    <Grid className={`topbar active`}>
       <Grid className="wrapper">
         <Grid className="left">
           <motion.div

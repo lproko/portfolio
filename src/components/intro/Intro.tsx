@@ -1,6 +1,6 @@
 import "./Intro.scss";
 import { Grid, Box } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Myphoto from "../../assets/mainIconsdark.svg";
 import Scroll from "../../assets/scroll.png";
 import BlackHole from "../../assets/blackhole.webm";
@@ -28,7 +28,7 @@ const textVariants = {
   },
 };
 
-const sliderVariants = {
+const sliderVariants: Variants = {
   initial: {
     x: 0,
   },
