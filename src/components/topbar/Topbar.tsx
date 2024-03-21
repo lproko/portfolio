@@ -4,6 +4,7 @@ import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { motion } from "framer-motion";
 import Sidebar from "../menu/Sidebar";
+import Logo from "../../assets/banner.png";
 
 function Topbar() {
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ function Topbar() {
           >
             <a href="#Homepage" className="logo">
               <img
-                src="../../src/assets/banner.png"
+                src={Logo}
                 // width="auto"
                 // height="80px"
                 alt="logo"
