@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import contactImg from "../../assets/contact-img.svg";
@@ -17,7 +17,10 @@ function Contact() {
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({
+    success: false,
+    message: "",
+  });
 
   const onFormUpdate = (category: string, value: string) => {
     setFormDetails({
@@ -40,10 +43,10 @@ function Contact() {
     let result = await response.json();
     setFormDetails(formInitialDetails);
     if (result.code == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
+      setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
-        succes: false,
+        success: false,
         message: "Something went wrong, please try again later.",
       });
     }
@@ -119,7 +122,7 @@ function Contact() {
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
-                          rows="6"
+                          rows={6}
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) =>

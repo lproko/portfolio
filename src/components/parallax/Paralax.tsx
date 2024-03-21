@@ -1,9 +1,8 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Planet from "../../assets/planets.png";
 import Sun from "../../assets/sun.png";
-import { Box } from "@mui/material";
 
 interface Properties {
   type: string;

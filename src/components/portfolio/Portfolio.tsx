@@ -1,5 +1,5 @@
 import "./Portfolio.scss";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 
 function Portfolio() {
   return <Grid className="portfolio">Porfolio</Grid>;
