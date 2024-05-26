@@ -1,7 +1,12 @@
+@import "../../App.scss";
+
 .contact {
   height: 100vh;
   background: linear-gradient(180deg, #030014, #030014);
   padding: 200px;
+  @include mobile {
+    padding: 20px;
+  }
 }
 .contact img {
   width: 92%;
