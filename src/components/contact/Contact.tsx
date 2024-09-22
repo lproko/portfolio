@@ -6,6 +6,7 @@ import contactImg from "../../assets/contact-img.svg";
 import { useState } from "react";
 import TrackVisibility from "react-on-screen";
 import "./Contact.scss";
+import Footer from "../footer/Footer";
 
 function Contact() {
   const formInitialDetails = {
@@ -151,6 +152,7 @@ function Contact() {
             </TrackVisibility>
           </Col>
         </Row>
+        <Footer />
       </Container>
     </Grid>
   );

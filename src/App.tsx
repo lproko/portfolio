@@ -8,6 +8,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Parallax from "./components/parallax/Paralax";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
         <section>
           <Contact />
         </section>
+        {/* <section>
+          <Footer />
+        </section> */}
       </Grid>
     </Grid>
   );
