@@ -5,9 +5,11 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { motion } from "framer-motion";
 import Sidebar from "../menu/Sidebar";
 import Logo from "../../assets/banner.png";
+import LogoMobile from "../../assets/banner-mobile.png";
 
 function Topbar() {
   // const [menuOpen, setMenuOpen] = useState(false);
+  const screen = window.innerWidth;
 
   return (
     <Grid className={`topbar active`}>
@@ -20,7 +22,7 @@ function Topbar() {
           >
             <a href="#Homepage" className="logo">
               <img
-                src={Logo}
+                src={screen < 600 ? LogoMobile : Logo}
                 // width="auto"
                 // height="80px"
                 alt="logo"
