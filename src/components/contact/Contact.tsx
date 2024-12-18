@@ -7,6 +7,7 @@ import { useState } from "react";
 import TrackVisibility from "react-on-screen";
 import "./Contact.scss";
 import Footer from "../footer/Footer";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
   const formInitialDetails = {
@@ -16,8 +17,9 @@ function Contact() {
     phone: "",
     message: "",
   };
+  const { t } = useTranslation();
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState(t("Contact.Form.Send"));
   const [status, setStatus] = useState({
     success: false,
     message: "",
@@ -32,7 +34,7 @@ function Contact() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setButtonText("Sending...");
+    setButtonText(t("Contact.Form.Sending "));
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
@@ -78,14 +80,14 @@ function Contact() {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Get In Touch</h2>
+                  <h2>{t("Contact.Contact")}</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
                           value={formDetails.firstName}
-                          placeholder="First Name"
+                          placeholder={t("Contact.Form.FirstName")}
                           onChange={(e) =>
                             onFormUpdate("firstName", e.target.value)
                           }
@@ -95,7 +97,7 @@ function Contact() {
                         <input
                           type="text"
                           value={formDetails.lastName}
-                          placeholder="Last Name"
+                          placeholder={t("Contact.Form.LastName")}
                           onChange={(e) =>
                             onFormUpdate("lastName", e.target.value)
                           }
@@ -105,7 +107,7 @@ function Contact() {
                         <input
                           type="email"
                           value={formDetails.email}
-                          placeholder="Email Address"
+                          placeholder={t("Contact.Form.Email")}
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
@@ -115,7 +117,7 @@ function Contact() {
                         <input
                           type="tel"
                           value={formDetails.phone}
-                          placeholder="Phone No."
+                          placeholder={t("Contact.Form.Phone")}
                           onChange={(e) =>
                             onFormUpdate("phone", e.target.value)
                           }
@@ -125,7 +127,7 @@ function Contact() {
                         <textarea
                           rows={6}
                           value={formDetails.message}
-                          placeholder="Message"
+                          placeholder={t("Contact.Form.Message")}
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }

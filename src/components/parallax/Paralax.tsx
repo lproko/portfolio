@@ -3,6 +3,7 @@ import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Planet from "../../assets/planets.png";
 import Sun from "../../assets/sun.png";
+import { useTranslation } from "react-i18next";
 
 interface Properties {
   type: string;
@@ -10,6 +11,7 @@ interface Properties {
 
 const Parallax = (props: Properties) => {
   const ref = useRef(null);
+  const { t } = useTranslation();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -28,7 +30,7 @@ const Parallax = (props: Properties) => {
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {props.type === "portfolio" ? "What We Do?" : "What We Did?"}
+        {props.type === "portfolio" ? t("Paralax.Do") : t("Paralax.Did")}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div

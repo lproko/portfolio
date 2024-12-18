@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Myphoto from "../../assets/mainIconsdark.svg";
 import Scroll from "../../assets/scroll.png";
 import BlackHole from "../../assets/blackhole.webm";
+import { useTranslation } from "react-i18next";
 
 const textVariants = {
   initial: {
@@ -54,6 +55,7 @@ const slideInFromRight = {
 };
 
 function Intro() {
+  const { t } = useTranslation();
   return (
     <Grid className="intro" id="Homepage">
       <video
@@ -71,26 +73,19 @@ function Intro() {
           initial="initial"
           animate="animate"
         >
-          <motion.h2
-            className="Welcome-text Welcome-box"
-            variants={textVariants}
-          >
-            LAUREN PROKO
-          </motion.h2>
           <motion.h1 variants={textVariants}>
-            <p>Elevating online presence</p> through expertly crafted web
-            solutions
+            <p>{t("Intro.FirstLine")}</p>
+            {t("Intro.SecondLine")}
           </motion.h1>
-          <motion.h3 variants={textVariants}>
-            Create exciting online experiences with full-stack mastery and years
-            of experience
-          </motion.h3>
+          <motion.h3 variants={textVariants}>{t("Intro.ThirdLine")}</motion.h3>
 
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
-              See the Latest Works
+              {t("Intro.WorkButton")}
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants}>
+              {t("Intro.ContactMe")}
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -120,7 +115,7 @@ function Intro() {
         initial="initial"
         animate="animate"
       >
-        Elevate Your Web Presence!
+        {t("Intro.Animation")}
       </motion.div>
     </Grid>
   );

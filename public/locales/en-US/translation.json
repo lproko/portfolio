@@ -1,0 +1,26 @@
+{
+  "Intro": {
+    "FirstLine": "Elevating online presence",
+    "SecondLine": "through expertly crafted web solutions",
+    "ThirdLine": "Create exciting online experiences with full-stack mastery and years of experience",
+    "WorkButton": "See the Latest Works",
+    "ContactMe": "Contact Me",
+    "Animation": "Elevate Your Web Presence!"
+  },
+  "Paralax": {
+    "Do": "What We Do?",
+    "Did": "What We Did?"
+  },
+  "Contact": {
+    "Contact": "Get In Touch",
+    "Form": {
+      "FirstName": "Firs Name",
+      "LastName": "Last Name",
+      "Email": "Email Address",
+      "Phone": "Phone No.",
+      "Message": "Message",
+      "Send": "Send",
+      "Sending": "Sending..."
+    }
+  }
+}
