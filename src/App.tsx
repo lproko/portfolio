@@ -8,43 +8,46 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Parallax from "./components/parallax/Paralax";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { LanguageContextProvider } from "./context/LanguageContext";
 // import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <Grid className="app">
-      <Topbar />
-      <Grid className="section">
-        <section>
-          <Intro />
-        </section>
-        <section>
-          <Box id="Portfolio">
-            <Parallax type="portfolio" />
-          </Box>
-        </section>
-        <section>
-          <Portfolio />
-        </section>
-        <section>
-          <Box id="Works">
-            <Parallax type="services" />
-          </Box>
-        </section>
+    <LanguageContextProvider>
+      <Grid className="app">
+        <Topbar />
+        <Grid className="section">
+          <section>
+            <Intro />
+          </section>
+          <section>
+            <Box id="Portfolio">
+              <Parallax type="portfolio" />
+            </Box>
+          </section>
+          <section>
+            <Portfolio />
+          </section>
+          <section>
+            <Box id="Works">
+              <Parallax type="services" />
+            </Box>
+          </section>
 
-        <Works />
+          <Works />
 
-        <section>
-          <Testimonials />
-        </section>
-        <section>
-          <Contact />
-        </section>
-        {/* <section>
+          <section>
+            <Testimonials />
+          </section>
+          <section>
+            <Contact />
+          </section>
+          {/* <section>
           <Footer />
         </section> */}
+        </Grid>
       </Grid>
-    </Grid>
+    </LanguageContextProvider>
   );
 }
 

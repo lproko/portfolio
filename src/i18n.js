@@ -19,7 +19,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng: localStorage.getItem("i18nextLng") || "el-GR",
+    lng: localStorage.getItem("language") || "el-GR",
     lookupLocalStorage: "i18nextLng",
     fallbackLng: "en",
     debug: false,

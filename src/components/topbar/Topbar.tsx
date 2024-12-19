@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Sidebar from "../menu/Sidebar";
 import Logo from "../../assets/banner.png";
 import LogoMobile from "../../assets/banner-mobile.png";
+import Languages from "./Languages";
 
 function Topbar() {
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +40,9 @@ function Topbar() {
             <MailOutlineIcon />
             <p>support@drweblab.gr</p>
           </Box>
+        </Grid>
+        <Grid display="flex" width="35%" justifyContent="flex-end">
+          <Languages />
         </Grid>
         <Grid>
           <Sidebar />

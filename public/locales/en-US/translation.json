@@ -22,5 +22,13 @@
       "Send": "Send",
       "Sending": "Sending..."
     }
+  },
+  "Languages": {
+    "Greek": "Greek",
+    "English": "English"
+  },
+  "AppBar": {
+    "Translations": "Languages",
+    "CurrentTranslation": "En"
   }
 }
