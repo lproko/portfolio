@@ -34,7 +34,7 @@ function Contact() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setButtonText(t("Contact.Form.Sending "));
+    setButtonText(t("Contact.Form.Sending"));
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
