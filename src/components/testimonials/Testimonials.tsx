@@ -64,7 +64,7 @@ function Testimonials() {
       setTab(id);
     });
   };
-
+  console.log(isPending);
   return (
     <section className="testimonials text-white" id="about">
       <Grid
