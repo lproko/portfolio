@@ -3,59 +3,65 @@ import About from "../../assets/About me.webp";
 import { useTransition, useState } from "react";
 import TabButton from "./TabButton";
 import { Grid, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul
-        style={{
-          listStyleType: "disc", // Equivalent to list-disc
-          paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
-        }}
-      >
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul
-        style={{
-          listStyleType: "disc", // Equivalent to list-disc
-          paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
-        }}
-      >
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul
-        style={{
-          listStyleType: "disc", // Equivalent to list-disc
-          paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
-        }}
-      >
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
-    ),
-  },
-];
 function Testimonials() {
+  const { t } = useTranslation();
+  const TAB_DATA = [
+    {
+      title: "Who We Are",
+      id: "skills",
+      content: (
+        <p
+          style={{
+            listStyleType: "disc", // Equivalent to list-disc
+            paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
+          }}
+        >
+          {t("AboutMe.Skils")}
+        </p>
+      ),
+    },
+    {
+      title: "What We Do",
+      id: "education",
+      content: (
+        <ul
+          style={{
+            listStyleType: "disc", // Equivalent to list-disc
+            paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
+          }}
+        >
+          <li>
+            <b>{t("AboutMe.EducaionTitle1")}</b>
+            <br />
+            <p>{t("AboutMe.EducaionBody1")}</p>
+          </li>
+
+          <li>
+            <b>{t("AboutMe.EducaionTitle2")}</b>
+            <br />
+            <p>{t("AboutMe.EducaionBody2")}</p>
+          </li>
+        </ul>
+      ),
+    },
+    {
+      title: "Certifications",
+      id: "certifications",
+      content: (
+        <p
+          style={{
+            listStyleType: "disc", // Equivalent to list-disc
+            paddingLeft: "0.5rem", // Equivalent to pl-2 (8px)
+          }}
+        >
+          {t("AboutMe.Certifications")}
+        </p>
+      ),
+    },
+  ];
+
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
 
@@ -66,7 +72,7 @@ function Testimonials() {
   };
   console.log(isPending);
   return (
-    <section className="testimonials text-white" id="about">
+    <section className="testimonials" style={{ color: "white" }} id="about">
       <Grid
         id="About"
         container
@@ -97,19 +103,14 @@ function Testimonials() {
               marginBottom: "1rem", // Equivalent to mb-4
             }}
           >
-            About Me
+            {t("AboutMe.About")}
           </h2>
           <Typography
             sx={{
               fontSize: { xs: "1rem", lg: "1.125rem" }, // text-base for small screens, lg:text-lg for large screens
             }}
           >
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            {t("AboutMe.Welcome")}
           </Typography>
           <Grid
             container
@@ -122,17 +123,17 @@ function Testimonials() {
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
-              children="Skills"
+              children={t("AboutMe.Button1")}
             ></TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
-              children="Education"
+              children={t("AboutMe.Button2")}
             ></TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
-              children="Certifications"
+              children={t("AboutMe.Button3")}
             ></TabButton>
           </Grid>
           <Grid mt="1rem">{TAB_DATA.find((t) => t.id === tab)?.content}</Grid>

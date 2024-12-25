@@ -30,5 +30,18 @@
   "AppBar": {
     "Translations": "Languages",
     "CurrentTranslation": "En"
+  },
+  "AboutMe": {
+    "About": "About Me",
+    "Welcome": "Welcome to our online home, where we transform simple ideas into powerful digital solutions. My name is Lauren Proko, and I am a seasoned Software Engineer with over 10 years of experience in web development, IT systems, and digital marketing. As the driving force behind this initiative, my mission is to provide businesses with cutting-edge, customized online solutions that deliver results.",
+    "Skils": "At DrWebLab, we do not just offer advice—we deliver solutions. We have been dedicated to helping businesses succeed online by offering comprehensive web development and marketing services. With a network of expert collaborators, we assign a personal consultant to each client, ensuring tailored strategies and continuous support.",
+    "EducaionTitle1": "Website Development & Design",
+    "EducaionBody1": "From professional website creation to e-commerce solutions and mobile app development, we specialize in building platforms that are visually appealing, user-friendly, and optimized for performance.",
+    "EducaionTitle2": "Complete Online Solutions",
+    "EducaionBody2": "Our services extend to web hosting, domain registration, email marketing, and consulting. Whether it’s a straightforward website or a highly customized digital solution, we ensure every project is designed to meet your unique business needs.",
+    "Certifications": "Every business is unique, and we treat it as such. From small-scale tasks to highly complex projects, our team is equipped to deliver exceptional results. By combining my personal passion for technology with extensive resources, we create digital experiences that not only stand out but also drive measurable growth.",
+    "Button1": "Who we are",
+    "Button2": "What we do",
+    "Button3": "Our Commitment"
   }
 }

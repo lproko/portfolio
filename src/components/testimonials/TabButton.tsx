@@ -13,21 +13,25 @@ const TabButton = ({ active, selectTab, children }: Props) => {
   const buttonClasses = active ? "#fff" : "#ADB7BE";
 
   return (
-    <button onClick={selectTab}>
+    <button
+      style={{ backgroundColor: "transparent", border: "none" }}
+      onClick={selectTab}
+    >
       <p
         style={{
           color: `${buttonClasses}`,
+          marginBottom: "0",
           marginRight: "0.75rem", // Equivalent to mr-3 (12px)
           fontWeight: "600", // Equivalent to font-semibold
           cursor: "pointer",
         }}
         onMouseEnter={(e) => {
           const target = e.target as HTMLElement; // Type assertion
-          target.style.color = "white"; // Hover effect
+          target.style.color = "gray"; // Hover effect
         }}
         onMouseLeave={(e) => {
           const target = e.target as HTMLElement; // Type assertion
-          target.style.color = ""; // Reset hover effect
+          target.style.color = `${buttonClasses}`; // Reset hover effect
         }}
       >
         {children}
