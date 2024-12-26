@@ -85,13 +85,13 @@ function Testimonials() {
           columnGap: { xl: 16 }, // xl:gap-16
         }}
       >
-        <img src={About} width={650} height={650} />
+        <img src={About} className="about-me-icon" />
         <Grid
-          width="50%"
+          width={{ xs: "100%", md: "50%" }}
           direction="column" // Equivalent to `flex-col`
           sx={{
             marginTop: { xs: 4, md: 0 }, // Equivalent to `mt-4 md:mt-0`
-            textAlign: "left", // Equivalent to `text-left`
+            // textAlign: "left", // Equivalent to `text-left`
             height: "100%", // Equivalent to `h-full`
           }}
         >
@@ -99,7 +99,7 @@ function Testimonials() {
             style={{
               fontSize: "2.25rem", // Equivalent to text-4xl (based on Tailwind's scale)
               fontWeight: "bold", // Equivalent to font-bold
-              color: "#ffffff", // Equivalent to text-white
+              color: "gray", // Equivalent to text-white
               marginBottom: "1rem", // Equivalent to mb-4
             }}
           >

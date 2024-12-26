@@ -1,4 +1,14 @@
+@import "../../App.scss";
+
 .testimonials {
   background: linear-gradient(180deg, #030014, #030014);
-  height: 100vh;
+  // height: 100vh;
+}
+.about-me-icon{
+  width: auto ;
+  height: 650px ;
+  @include mobile {
+    width: 650px;
+    height: auto;
+  }
 }

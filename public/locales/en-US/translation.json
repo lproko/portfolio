@@ -43,5 +43,21 @@
     "Button1": "Who we are",
     "Button2": "What we do",
     "Button3": "Our Commitment"
+  },
+  "Services": {
+    "Header": "Services",
+    "Description": "Website construction, promotion and support services",
+    "Service1": "Simple Website",
+    "Service1Description": "Get a professional, responsive website tailored to your needs. Ideal for small businesses or personal portfolios, our simple websites combine sleek design with essential features to establish your online presence.",
+    "Service2": "Custom Website",
+    "Service2Description": "Transform your vision into reality with a custom-built website. Designed from the ground up, we craft unique solutions that reflect your brand and deliver outstanding user experiences.",
+    "Service3": "Web Application",
+    "Service3Description": "Empower your business with custom web applications designed for efficiency and scalability. We develop robust, secure, and user-friendly solutions that meet your unique requirements.",
+    "Service4": "Search Engine Optimization (SEO)",
+    "Service4Description": "Boost your online visibility and attract more traffic with our expert SEO services. From keyword optimization to technical enhancements, we help your website rank higher on search engines.",
+    "Service5": "Maintenance & Support",
+    "Service5Description": "Ensure your website stays secure, up-to-date, and performs at its best. Our maintenance and support services include updates, troubleshooting, and regular performance checks.",
+    "Service6": "Mobile App Development",
+    "Service6Description": "Expand your reach with custom mobile apps for iOS and Android. Our team delivers user-friendly, feature-rich applications tailored to meet your business goals."
   }
 }

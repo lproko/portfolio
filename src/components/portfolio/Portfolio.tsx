@@ -1,14 +1,14 @@
 import "./Portfolio.scss";
 import { Grid } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function Portfolio() {
+  const { t } = useTranslation();
   return (
     <Grid className="portfolio service component__space" id="Services">
       <Grid className="heading">
-        <h1 className="heading">Services</h1>
-        <p className="heading p__color">
-          Website construction, promotion and support services
-        </p>
+        <h1 className="heading">{t("Services.Header")}</h1>
+        <p className="heading p__color">{t("Services.Description")}</p>
       </Grid>
 
       <Grid container gap="1rem" mt="1rem" p="1.5rem">
@@ -32,18 +32,9 @@ function Portfolio() {
                 </svg>
               </Grid>
               <Grid className="service__meta">
-                <h1 className="service__text">Simple Website</h1>
+                <h1 className="service__text">{t("Services.Service1")}</h1>
                 <p className="p service__text p__color">
-                  Get a professional, responsive website tailored to your needs.
-                  Ideal for
-                </p>
-                <p className="p service__text p__color">
-                  small businesses or personal portfolios,our simple websites
-                  combine
-                </p>
-                <p className="p service__text p__color">
-                  sleek design with essential features to establish your online
-                  presence.
+                  {t("Services.Service1Description")}
                 </p>
               </Grid>
             </Grid>
@@ -69,17 +60,9 @@ function Portfolio() {
                 </svg>
               </div>
               <div className="service__meta">
-                <h1 className="service__text">Custom Website</h1>
+                <h1 className="service__text">{t("Services.Service2")}</h1>
                 <p className="p service__text p__color">
-                  Transform your vision into reality with a custom-built
-                  website.
-                </p>
-                <p className="p service__text p__color">
-                  Designed from the ground up, we craft unique solutions
-                </p>
-                <p className="p service__text p__color">
-                  that reflect your brand and deliver outstanding user
-                  experiences.
+                  {t("Services.Service2Description")}
                 </p>
               </div>
             </div>
@@ -106,16 +89,9 @@ function Portfolio() {
                 </svg>
               </div>
               <div className="service__meta">
-                <h1 className="service__text">Web Application</h1>
+                <h1 className="service__text">{t("Services.Service3")}</h1>
                 <p className="p service__text p__color">
-                  Empower your business with custom web applications designed
-                  for
-                </p>
-                <p className="p service__text p__color">
-                  efficiency and scalability. We develop robust, secure, and
-                </p>
-                <p className="p service__text p__color">
-                  user-friendly solutions that meet your unique requirements.
+                  {t("Services.Service3Description")}
                 </p>
               </div>
             </div>
@@ -142,19 +118,9 @@ function Portfolio() {
                 </svg>
               </div>
               <div className="service__meta">
-                <h1 className="service__text">
-                  Search Engine Optimization (SEO)
-                </h1>
+                <h1 className="service__text">{t("Services.Service4")}</h1>
                 <p className="p service__text p__color">
-                  Boost your online visibility and attract more traffic with our
-                  expert SEO
-                </p>
-                <p className="p service__text p__color">
-                  services. From keyword optimization to technical enhancements,
-                  we
-                </p>
-                <p className="p service__text p__color">
-                  help your website rank higher on search engines.
+                  {t("Services.Service4Description")}
                 </p>
               </div>
             </div>
@@ -181,16 +147,9 @@ function Portfolio() {
                 </svg>
               </div>
               <div className="service__meta">
-                <h1 className="service__text">Maintenance & Support</h1>
+                <h1 className="service__text">{t("Services.Service5")}</h1>
                 <p className="p service__text p__color">
-                  Ensure your website stays secure, up-to-date, and performs at
-                  its best.
-                </p>
-                <p className="p service__text p__color">
-                  Our maintenance and support services include updates,
-                </p>
-                <p className="p service__text p__color">
-                  troubleshooting, and regular performance checks.
+                  {t("Services.Service5Description")}
                 </p>
               </div>
             </div>
@@ -216,16 +175,10 @@ function Portfolio() {
                 </svg>
               </div>
               <div className="service__meta">
-                <h1 className="service__text">Mobile App Development</h1>
+                <h1 className="service__text">{t("Services.Service6")}</h1>
                 <p className="p service__text p__color">
-                  Expand your reach with custom mobile apps for iOS and Android.
-                  Our
+                  {t("Services.Service6Description")}
                 </p>
-                <p className="p service__text p__color">
-                  team delivers user-friendly, feature-rich applications
-                  tailored to meet
-                </p>
-                <p className="p service__text p__color">your business goals.</p>
               </div>
             </div>
           </Grid>

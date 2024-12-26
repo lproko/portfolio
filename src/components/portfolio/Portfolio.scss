@@ -1,6 +1,6 @@
 .portfolio {
   background: linear-gradient(180deg, #030014, #030014);
-  height: 100vh;
+  // height: 100vh;
 }
 
 h1.heading {
@@ -9,6 +9,7 @@ h1.heading {
   font-weight: 700;
   font-family: Poppins, sans-serif;
   margin-bottom: 10px;
+  color: gray;
 }
 
 p.heading.p__color {
@@ -24,7 +25,7 @@ p.heading.p__color {
   border-radius: 10px;
   width: 100%;
   background-color: #191919;
-  padding: 55px;
+  padding: 45px;
   transition: .4s ease;
  
 }
@@ -32,7 +33,7 @@ p.heading.p__color {
 .service__box:hover {
   transform: translateY(5px);
   background-image: linear-gradient(90deg, #f61b10, #ef0963);
-  
+  color: black;
 }
 .col__3{
   overflow: hidden;
@@ -42,8 +43,11 @@ p.heading.p__color {
   color: #fff;
 }
 
-.service__box:hover p.service__text .p__color {
-        color: #fff !important;
+.service__box:hover p.service__text.p__color {
+  color: #fff !important;
+}
+.service__box:hover h1.service__text {
+  color: #fff !important;
 }
 
 .icon {
@@ -56,12 +60,15 @@ p.heading.p__color {
 
 p.service__text.p__color {
   margin-bottom: 0;
+  color: gray;
+  min-height: 120px;
 }
 
 h1.service__text {
   font-size: 19px;
   font-family: Poppins, sans-serif;
   padding: 10px 0px;
+  color: gray;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -80,7 +80,7 @@ function Contact() {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>{t("Contact.Contact")}</h2>
+                  <h2 style={{ color: "gray" }}>{t("Contact.Contact")}</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
