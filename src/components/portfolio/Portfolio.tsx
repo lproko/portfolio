@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function Portfolio() {
   const { t } = useTranslation();
   return (
-    <Grid className="portfolio service component__space" id="Services">
+    <Grid className="portfolio service component__space" id="Portfolio">
       <Grid className="heading">
         <h1 className="heading">{t("Services.Header")}</h1>
         <p className="heading p__color">{t("Services.Description")}</p>

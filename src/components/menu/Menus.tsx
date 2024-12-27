@@ -1,6 +1,7 @@
 import "./Menus.scss";
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
+import { useScroll } from "../../context/ScrollContext";
 
 const variants = {
   open: {
@@ -30,7 +31,7 @@ const itemVariants = {
 
 function Menus() {
   const items = ["Homepage", "Portfolio", "Works", "About", "Contact"];
-
+  const { scrollToSection } = useScroll();
   return (
     <motion.div className="list" variants={variants}>
       {items.map((item: any) => {
@@ -47,8 +48,9 @@ function Menus() {
             // onClick={()=>{props.CloseDrawer(false)}}
           >
             <motion.a
-              href={`#${item}`}
+              // href={`#${item}`}
               key={item}
+              onClick={() => scrollToSection(item, 40)}
               variants={itemVariants}
               whileHover={{ fontSize: "40px" }}
               whileTap={{ scale: 0.95 }}

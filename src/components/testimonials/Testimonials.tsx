@@ -72,9 +72,8 @@ function Testimonials() {
   };
   console.log(isPending);
   return (
-    <section className="testimonials" style={{ color: "white" }} id="about">
+    <section id="About" className="testimonials" style={{ color: "white" }}>
       <Grid
-        id="About"
         container
         display="flex"
         spacing={2} // Equivalent to gap-8 (spacing unit is usually set in the theme, adjust as needed)
