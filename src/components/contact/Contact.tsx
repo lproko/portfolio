@@ -19,6 +19,15 @@ function Contact() {
       console.error("Form reference is null");
       return;
     }
+    const formData = new FormData(form.current);
+    const email = formData.get("email")?.toString();
+    const phone = formData.get("phone")?.toString();
+    const message = formData.get("message")?.toString();
+
+    if (!email || !phone || !message) {
+      alert("Please fill in all mandatory fields");
+      return;
+    }
 
     setButtonText(t("Contact.Form.Sending"));
     setDisabled(true);
@@ -47,7 +56,7 @@ function Contact() {
   const [disabled, setDisabled] = useState(false);
 
   return (
-    <Grid className="contact" id="Contact">
+    <Grid className="contact" id={t("Menu.Contact")}>
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
@@ -92,22 +101,25 @@ function Contact() {
                         <input
                           type="email"
                           name="email"
-                          placeholder={t("Contact.Form.Email")}
+                          placeholder={`${t("Contact.Form.Email")}*`}
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
                           name="phone"
-                          placeholder={t("Contact.Form.Phone")}
+                          placeholder={`${t("Contact.Form.Phone")}*`}
                         />
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
                           rows={6}
                           name="message"
-                          placeholder={t("Contact.Form.Message")}
+                          placeholder={`${t("Contact.Form.Message")}*`}
                         ></textarea>
+                        <p style={{ color: "white" }}>
+                          *{t("Contact.Mandatory")}
+                        </p>
                         <button type="submit" disabled={disabled}>
                           <span>{buttonText}</span>
                         </button>

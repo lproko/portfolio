@@ -57,7 +57,7 @@ const slideInFromRight = {
 function Intro() {
   const { t } = useTranslation();
   return (
-    <Grid className="intro" id="Homepage">
+    <Grid className="intro" id={t("Menu.Home")}>
       <video
         autoPlay
         muted
@@ -80,12 +80,16 @@ function Intro() {
           <motion.h3 variants={textVariants}>{t("Intro.ThirdLine")}</motion.h3>
 
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              {t("Intro.WorkButton")}
-            </motion.button>
-            <motion.button variants={textVariants}>
-              {t("Intro.ContactMe")}
-            </motion.button>
+            <a href={`/#${t("Menu.Works")}`}>
+              <motion.button variants={textVariants}>
+                {t("Intro.WorkButton")}
+              </motion.button>
+            </a>
+            <a href={`/#${t("Menu.Contact")}`}>
+              <motion.button variants={textVariants}>
+                {t("Intro.ContactMe")}
+              </motion.button>
+            </a>
           </motion.div>
           <motion.img
             variants={textVariants}

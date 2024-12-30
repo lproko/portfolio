@@ -2,6 +2,7 @@ import "./Menus.scss";
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { useScroll } from "../../context/ScrollContext";
+import { useTranslation } from "react-i18next";
 
 const variants = {
   open: {
@@ -30,7 +31,14 @@ const itemVariants = {
 };
 
 function Menus() {
-  const items = ["Homepage", "Portfolio", "Works", "About", "Contact"];
+  const { t } = useTranslation();
+  const items = [
+    t("Menu.Home"),
+    t("Menu.Portfolio"),
+    t("Menu.Works"),
+    t("Menu.About"),
+    t("Menu.Contact"),
+  ];
   const { scrollToSection } = useScroll();
   return (
     <motion.div className="list" variants={variants}>

@@ -1,4 +1,11 @@
 {
+  "Menu": {
+    "Home": "Home",
+    "Portfolio": "Services",
+    "Works": "Projects",
+    "About": "About Us",
+    "Contact": "Contact"
+  },
   "Intro": {
     "FirstLine": "Elevating online presence",
     "SecondLine": "through expertly crafted web solutions",
@@ -21,7 +28,8 @@
       "Message": "Message",
       "Send": "Send",
       "Sending": "Sending..."
-    }
+    },
+    "Mandatory": "denotes mandatory"
   },
   "Languages": {
     "Greek": "Greek",
@@ -59,5 +67,9 @@
     "Service5Description": "Ensure your website stays secure, up-to-date, and performs at its best. Our maintenance and support services include updates, troubleshooting, and regular performance checks.",
     "Service6": "Mobile App Development",
     "Service6Description": "Expand your reach with custom mobile apps for iOS and Android. Our team delivers user-friendly, feature-rich applications tailored to meet your business goals."
+  },
+  "Projects": {
+    "Header": "Projects",
+    "Description": "Discover a showcase of our latest projects where creativity meets functionality. From stunning website designs to innovative web applications, each project exemplifies our commitment to excellence and client satisfaction. Dive in to see how we can bring your vision to life."
   }
 }

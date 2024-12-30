@@ -35,7 +35,7 @@ function App() {
                 <Parallax type="services" />
               </Box>
             </section>
-            <Box id="Works">
+            <Box>
               <Works />
             </Box>
 

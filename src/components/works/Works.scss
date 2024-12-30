@@ -6,24 +6,24 @@
   position: relative;
   background-color: #0c0c1d;
   overflow: hidden;
-  height: 100vh;
+  // height: 100vh;
 }
 .animate__fadeIn {
   overflow: hidden;
 }
 .project h2 {
-  font-size: 45px;
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
 }
 .project p {
   color: #b8b8b8;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
+   margin-bottom: 15px ;
+  // text-align: center;
+  // width: 56%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -83,7 +83,7 @@
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
-  width: 85%;
+  width: 100%;
   height: auto;
 }
 .proj-imgbx::before {

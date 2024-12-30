@@ -7,11 +7,12 @@ import Sidebar from "../menu/Sidebar";
 import Logo from "../../assets/banner.png";
 import LogoMobile from "../../assets/banner-mobile.png";
 import Languages from "./Languages";
+import { useTranslation } from "react-i18next";
 
 function Topbar() {
   // const [menuOpen, setMenuOpen] = useState(false);
   const screen = window.innerWidth;
-
+  const { t } = useTranslation();
   return (
     <Grid className={`topbar active`}>
       <Grid className="wrapper">
@@ -21,7 +22,7 @@ function Topbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <a href="#Homepage" className="logo">
+            <a href={t("Menu.Home")} className="logo">
               <img
                 src={screen < 600 ? LogoMobile : Logo}
                 // width="auto"

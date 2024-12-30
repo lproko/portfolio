@@ -72,7 +72,11 @@ function Testimonials() {
   };
   console.log(isPending);
   return (
-    <section id="About" className="testimonials" style={{ color: "white" }}>
+    <section
+      id={t("Menu.About")}
+      className="testimonials"
+      style={{ color: "white" }}
+    >
       <Grid
         container
         display="flex"
