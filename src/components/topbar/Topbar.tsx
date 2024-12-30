@@ -22,7 +22,7 @@ function Topbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <a href={t("Menu.Home")} className="logo">
+            <a href={`/#${t("Menu.Home")}`} className="logo">
               <img
                 src={screen < 600 ? LogoMobile : Logo}
                 // width="auto"
